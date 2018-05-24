@@ -18,6 +18,7 @@ GUIDELINES:
 1) Run the script
 2) put all the encrypted files(.bin files) in a folder and enter its path when prompted
 3) give a valid separate folder to store decrypted files
+4) uncomment code at line 223 if you want to delete encrypted files after successful decryption
 """
 
 
@@ -219,7 +220,7 @@ def main():
             file.write(unhexlify(original_content.encode('utf-8')))
 
         # DELETING THE ENCRYPTED FILE AFTER SUCCESSFUL DECRYPTION
-        os.remove(all_files[i])
+        # os.remove(all_files[i])
         print("FILE {} DECRYPTED\n".format(all_files[i]))
 
 
