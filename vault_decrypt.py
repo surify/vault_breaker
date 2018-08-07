@@ -3,7 +3,7 @@
 
 """
 AUTHOR: P SURYA TEJA
-LAST MODIFIED(DD-MM-YYYY): 17-01-2018
+LAST MODIFIED(DD-MM-YYYY): 07-08-2018
 
 This program decrypts image, audio, video, pdf files encrypted by vault by bruteforcing the key and replacing the
 encrypted contents of the file with original contents.
@@ -30,19 +30,9 @@ def extractName(file_name):
     """this function takes a filename with extension and
     returns the filename after removing the extension.
 
-    For example it takes 'earth.jpg' and returns 'earth'
-
-    this function first reverses the file name, removes the extension,
-    and then reverses it again.
-
-    I decided to do the extraction of filename this way because, even if
-    in future vault app names their encrypted files like
-    filename.bin(i.e. retaining the original filename for encrypted files
-    rather than using a random name like 2345334333.bin and the original
-    filename contains '.', the function works as expected).
-
-    """
-    return file_name[::-1].split('.', 1)[1][::-1]
+    For example it takes 'earth.jpg' and returns 'earth'"""
+    
+    return file_name.rsplit('.', maxsplit=1)[0]
 
 
 def isBinary(filename):
