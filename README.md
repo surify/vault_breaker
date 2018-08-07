@@ -11,4 +11,4 @@ GUIDELINES:
 1) Run the script
 2) put all the encrypted files(.bin files) in a folder and enter its path when prompted
 3) give a valid separate folder to store decrypted files
-4) uncomment code at line 223 if you want to delete encrypted files after successful decryption
+4) uncomment last but one line of main() if you want to delete encrypted files after successful decryption
